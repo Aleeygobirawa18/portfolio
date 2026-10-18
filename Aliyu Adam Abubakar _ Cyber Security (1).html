@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aliyu Adam Abubakar | Cyber Security</title>
+<style>
+:root {
+  box-sizing: border-box;
+  --bg: #f6f7f4;
+  --surface: #ffffff;
+  --text: #15191c;
+  --muted: #5a636b;
+  --accent: #0a6b4f;
+  --accent-soft: #e4f2ec;
+  --border: #dfe3df;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1412;
+    --surface: #161e1b;
+    --text: #e6ece9;
+    --muted: #9aa8a2;
+    --accent: #58c79f;
+    --accent-soft: #1a2c25;
+    --border: #243029;
+    color-scheme: dark;
+  }
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: 1rem; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+main { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.25rem 3rem; }
+
+/* Hero */
+.hero { padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  margin: 0 0 1rem;
+}
+h1 { font-size: clamp(2rem, 6vw, 2.8rem); line-height: 1.15; margin: 0 0 0.5rem; }
+.headline { color: var(--accent); font-weight: 600; margin: 0 0 1rem; }
+.summary { color: var(--muted); max-width: 66ch; margin: 0 0 1.25rem; }
+.links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 1.25rem;
+}
+.links a:hover { text-decoration: underline; }
+
+/* Sections */
+nav.toc { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0 0.5rem; }
+nav.toc a {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+}
+nav.toc a:hover { color: var(--accent); border-color: var(--accent); }
+section { margin-top: 2.5rem; }
+h2 { font-size: 1.3rem; margin: 0 0 1rem; }
+
+/* Skills */
+.skill-groups { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+}
+.card h3 { margin: 0 0 0.5rem; font-size: 1.02rem; }
+.card p { margin: 0 0 0.4rem; color: var(--muted); font-size: 0.93rem; }
+.card ul { margin: 0.4rem 0 0; padding-left: 1.1rem; color: var(--muted); font-size: 0.93rem; }
+.card li + li { margin-top: 0.25rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem; }
+.tag {
+  font-size: 0.78rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* Projects */
+.project { display: grid; gap: 0.5rem; }
+.project .meta { font-size: 0.82rem; color: var(--accent); font-weight: 600; }
+.project h3 { margin: 0; font-size: 1.05rem; }
+
+/* Certificates */
+.cert-grid { display: grid; gap: 0.6rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.cert {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+.cert strong { display: block; font-size: 0.95rem; }
+.cert span { font-size: 0.85rem; color: var(--muted); }
+.cert.featured { border-left-width: 5px; }
+h3.sub { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 1.25rem 0 0.6rem; }
+
+/* Timeline (experience, education) */
+.entry {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 0.9rem;
+}
+.entry h3 { margin: 0; font-size: 1.02rem; }
+.entry .org { color: var(--muted); font-size: 0.92rem; margin: 0.15rem 0 0.5rem; }
+.entry ul { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: 0.93rem; }
+.entry li + li { margin-top: 0.25rem; }
+
+footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+
+<header class="hero">
+  <p class="eyebrow">Open to internships</p>
+  <h1>Aliyu Adam Abubakar</h1>
+  <p class="headline">Cyber Security Intern Candidate | Network Security | Security Fundamentals | IT Systems</p>
+  <p class="summary">Early-career cybersecurity candidate with hands-on experience in network security and traffic analysis. Built through the 3MTT Cybersecurity Programme and Cisco Networking Academy, with practical work in Wireshark, Nmap, Cisco Packet Tracer, and Microsoft Defender. Based in Kano, Nigeria.</p>
+  <p class="links">
+    <a href="https://linkedin.com/in/aliyu-adam-abubakar">LinkedIn</a>
+    <a href="https://github.com/aleeygobirawa18">GitHub</a>
+    <a href="mailto:aliyumarah1234@gmail.com">Email</a>
+  </p>
+  <nav class="toc">
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+  </nav>
+</header>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skill-groups">
+    <div class="card">
+      <h3>Cybersecurity</h3>
+      <p>Vulnerability assessment, threat analysis, and incident documentation.</p>
+      <div class="tags">
+        <span class="tag">Network traffic analysis</span>
+        <span class="tag">Vulnerability assessment</span>
+        <span class="tag">Access control</span>
+        <span class="tag">Endpoint security</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Networking</h3>
+      <p>Protocol fundamentals and troubleshooting.</p>
+      <div class="tags">
+        <span class="tag">TCP/IP</span>
+        <span class="tag">DNS, DHCP</span>
+        <span class="tag">Routing and switching</span>
+        <span class="tag">Cisco Packet Tracer</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Tools</h3>
+      <p>Hands-on with analysis tools and practical labs.</p>
+      <div class="tags">
+        <span class="tag">Wireshark</span>
+        <span class="tag">Nmap</span>
+        <span class="tag">Microsoft Defender</span>
+        <span class="tag">TryHackMe</span>
+        <span class="tag">Git and GitHub</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>AI and Development</h3>
+      <p>Generative AI and application building.</p>
+      <div class="tags">
+        <span class="tag">Claude API</span>
+        <span class="tag">Generative AI</span>
+        <span class="tag">Python (basic)</span>
+        <span class="tag">JavaScript (basic)</span>
+        <span class="tag">Supabase, Firebase</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="skill-groups">
+    <div class="card project">
+      <span class="meta">3MTT Cybersecurity Programme, 2026</span>
+      <h3>Network Traffic Analysis</h3>
+      <p>Designed and simulated a network topology in Cisco Packet Tracer. Captured and analysed 343 packets in Wireshark, examining TCP, DNS, ICMP, ARP and TLS traffic to identify patterns. Findings were documented and published to GitHub for review.</p>
+    </div>
+    <div class="card project">
+      <span class="meta">Independent project, 2026</span>
+      <h3>WannaCry Ransomware Case Study</h3>
+      <p>Researched the attack lifecycle, propagation method, and mitigation strategies, then produced structured incident documentation and educational material.</p>
+    </div>
+    <div class="card project">
+      <span class="meta">Independent project, 2026</span>
+      <h3>Cybersecurity Incident Timeline</h3>
+      <p>An interactive timeline cataloguing major cybersecurity incidents and industry milestones to track how the threat landscape has evolved.</p>
+    </div>
+    <div class="card project">
+      <span class="meta">Co-founder, 2025 to present</span>
+      <h3>BioSecure Blockchain Solutions</h3>
+      <p>Implementing role-based access control and secure authentication for a Hospital Information Management System that handles sensitive healthcare data. Supabase backend, with requirements gathered from healthcare stakeholders.</p>
+    </div>
+    <div class="card project">
+      <span class="meta">Platform</span>
+      <h3>AmanaVault</h3>
+      <p>Secure digital device management platform for phone charging centers and repair shops in Northern Nigeria.</p>
+    </div>
+  </div>
+</section>
+
+<section id="certificates">
+  <h2>Certificates</h2>
+  <div class="cert featured" style="margin-bottom:0.6rem">
+    <strong>3MTT Cyber Security Programme (NITDA)</strong>
+    <span>Certificate of completion, Federal Government 3MTT Initiative. Course: Cyber Security. Completed June 2026.</span>
+  </div>
+  <h3 class="sub">Cybersecurity and networking</h3>
+  <div class="cert-grid">
+    <div class="cert"><strong>ISC² Certified in Cybersecurity (CC)</strong><span>2026</span></div>
+    <div class="cert"><strong>Cisco Networking Academy: Network Technician Path</strong><span>2025</span></div>
+    <div class="cert"><strong>Vulnerability Assessment and Penetration Testing</strong><span>Simplilearn, 2026</span></div>
+    <div class="cert"><strong>Cybersecurity Virtual Experience</strong><span>Mastercard via Forage, 2026</span></div>
+    <div class="cert"><strong>Introduction to Cybersecurity</strong><span>Federal Ministry of Youth Development, 2022</span></div>
+    <div class="cert"><strong>Prep2SOAR Programme</strong><span>Mastercard Foundation, 2026</span></div>
+  </div>
+  <h3 class="sub">AI</h3>
+  <div class="cert-grid">
+    <div class="cert"><strong>Claude AI Application Development</strong></div>
+    <div class="cert"><strong>Microsoft AI Fluency</strong></div>
+    <div class="cert"><strong>Generative AI Literacy</strong></div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="entry">
+    <h3>Mastercard Foundation Associates</h3>
+    <p class="org">Maple Global Innovations Ltd, 22 September 2026 to 22 September 2027 (current)</p>
+    <ul>
+      <li>Selected through a competitive process for a one-year internship assisting the TVET programme under the Department of Computer Hardware Maintenance and Repair.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <h3>Data Enrollment Officer</h3>
+    <p class="org">Knowledge Square Foresights Nigeria Ltd (NIMC-linked programme), 2025</p>
+    <ul>
+      <li>Handled secure biometric and demographic data enrollment, maintaining strict confidentiality and data integrity.</li>
+      <li>Managed accurate digital records in line with internal data-management and data-protection procedures.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <h3>City Lead</h3>
+    <p class="org">StartupSouth Kano</p>
+    <ul><li>Coordinating startup ecosystem activities and community engagement.</li></ul>
+  </div>
+  <div class="entry">
+    <h3>Campus Ambassador</h3>
+    <p class="org">Young Innovators Nigeria</p>
+    <ul><li>Promoting innovation and entrepreneurship among students.</li></ul>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="entry">
+    <h3>MSc Environmental Microbiology (in progress)</h3>
+    <p class="org">Federal University Dutsin-Ma (FUDMA)</p>
+  </div>
+  <div class="entry">
+    <h3>B.Sc. Microbiology</h3>
+    <p class="org">Federal University Dutsin-Ma (FUDMA), CGPA 3.17/5.00</p>
+  </div>
+  <div class="entry">
+    <h3>Diploma in Data Processing and IT</h3>
+    <p class="org">2022</p>
+  </div>
+</section>
+
+<footer>
+  Aliyu Adam Abubakar · Kano, Nigeria · NYSC completed
+</footer>
+
+</main>
+</body>
+</html>
